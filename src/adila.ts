@@ -31,7 +31,7 @@ const prompt = new PromptTemplate({
 const chain = RetrievalQAChain.fromLLM(openAiChat, redisVectorStore.asRetriever(3), {
   prompt,
   returnSourceDocuments: true,
-  verbose: false
+  verbose: true
 })
 
 async function main() {

@@ -10,8 +10,8 @@ export const redis = createClient({
 export const redisVectorStore = new RedisVectorStore(
   new OpenAIEmbeddings({ openAIApiKey: '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' }),
   {
-    indexName: 'gpt-embeddings',
+    indexName: 'adilaAi-embeddings',
     redisClient: redis,
-    keyPrefix: 'gpt-answers',
+    keyPrefix: 'adilaAi:',
   }  
 )
