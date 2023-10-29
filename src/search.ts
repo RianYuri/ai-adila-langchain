@@ -4,7 +4,7 @@ async function search() {
   await redis.connect()
 
   const response = await redisVectorStore.similaritySearchWithScore(
-    'quais frameworks do mundo javascript a google cuida?',
+    'Fale sobre o racismo?',
     4
     )
     console.log(response)

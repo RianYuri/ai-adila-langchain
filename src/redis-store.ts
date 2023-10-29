@@ -8,7 +8,7 @@ export const redis = createClient({
 })
 
 export const redisVectorStore = new RedisVectorStore(
-  new OpenAIEmbeddings({ openAIApiKey: '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' }),
+  new OpenAIEmbeddings({ openAIApiKey: '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' }),
   {
     indexName: 'adilaAi-embeddings',
     redisClient: redis,

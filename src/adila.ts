@@ -4,7 +4,7 @@ import { PromptTemplate } from 'langchain/prompts'
 import { redis, redisVectorStore } from './redis-store'
 
 const openAiChat = new ChatOpenAI({
-  openAIApiKey: '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',
+  openAIApiKey: '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',
   modelName: 'gpt-3.5-turbo',
   temperature: 0.3
 })
@@ -39,7 +39,7 @@ async function main() {
   
   const response = await chain.call({
    
-    query: 'Qual a vantagem de utilizar Java?'
+    query: 'Texto sobre o racismo?'
   })
   
   console.log(response)
