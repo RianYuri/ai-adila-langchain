@@ -16,7 +16,7 @@ const prompt = new PromptTemplate({
     Utilize o acervo de termos racistas que foram fornecidas.
     Se a resposta não for encontrada nos textos, responda que você não encontrou nenhuma irregularidade, não tente inventar uma resposta.
 
-    Se possível, inclua exemplo de código em Javascript e Typecript.
+    Se possível, inclua exemplo de sugestão de palavras de termo perjurativo por palavras polidas livre de preconceito.
 
 
     textDataAdila:
@@ -28,7 +28,7 @@ const prompt = new PromptTemplate({
   inputVariables: ['context', 'question']
 })
 
-const chain = RetrievalQAChain.fromLLM(openAiChat, redisVectorStore.asRetriever(3), {
+const chain = RetrievalQAChain.fromLLM(openAiChat, redisVectorStore.asRetriever(), {
   prompt,
   returnSourceDocuments: true,
   verbose: true
